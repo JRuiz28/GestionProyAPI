@@ -22,7 +22,7 @@ namespace GestionProyAPI.DataSets {
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
     [global::System.Xml.Serialization.XmlRootAttribute("DataSetGestionProy")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class GestionProyTableAdapter : global::System.Data.DataSet {
+    public partial class DataSetGestionProy : global::System.Data.DataSet {
         
         private PriorityDataTable tablePriority;
         
@@ -54,7 +54,7 @@ namespace GestionProyAPI.DataSets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public GestionProyTableAdapter() {
+        public DataSetGestionProy() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -65,7 +65,7 @@ namespace GestionProyAPI.DataSets {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        protected GestionProyTableAdapter(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected DataSetGestionProy(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -216,7 +216,7 @@ namespace GestionProyAPI.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            GestionProyTableAdapter cln = ((GestionProyTableAdapter)(base.Clone()));
+            DataSetGestionProy cln = ((DataSetGestionProy)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -434,7 +434,7 @@ namespace GestionProyAPI.DataSets {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            GestionProyTableAdapter ds = new GestionProyTableAdapter();
+            DataSetGestionProy ds = new DataSetGestionProy();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -715,7 +715,7 @@ namespace GestionProyAPI.DataSets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GestionProyTableAdapter ds = new GestionProyTableAdapter();
+                DataSetGestionProy ds = new DataSetGestionProy();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1087,7 +1087,7 @@ namespace GestionProyAPI.DataSets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GestionProyTableAdapter ds = new GestionProyTableAdapter();
+                DataSetGestionProy ds = new DataSetGestionProy();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1380,7 +1380,7 @@ namespace GestionProyAPI.DataSets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GestionProyTableAdapter ds = new GestionProyTableAdapter();
+                DataSetGestionProy ds = new DataSetGestionProy();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -1674,7 +1674,7 @@ namespace GestionProyAPI.DataSets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GestionProyTableAdapter ds = new GestionProyTableAdapter();
+                DataSetGestionProy ds = new DataSetGestionProy();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2057,7 +2057,7 @@ namespace GestionProyAPI.DataSets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GestionProyTableAdapter ds = new GestionProyTableAdapter();
+                DataSetGestionProy ds = new DataSetGestionProy();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -2344,7 +2344,7 @@ namespace GestionProyAPI.DataSets {
                 this.columnemail.AllowDBNull = false;
                 this.columnemail.MaxLength = 50;
                 this.columnpassHash.AllowDBNull = false;
-                this.columnpassHash.MaxLength = 50;
+                this.columnpassHash.MaxLength = 255;
                 this.columncreatedIn.AllowDBNull = false;
                 this.columnstate.AllowDBNull = false;
             }
@@ -2414,7 +2414,7 @@ namespace GestionProyAPI.DataSets {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                GestionProyTableAdapter ds = new GestionProyTableAdapter();
+                DataSetGestionProy ds = new DataSetGestionProy();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -3576,7 +3576,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GestionProyTableAdapter.PriorityDataTable dataTable) {
+        public virtual int Fill(DataSetGestionProy.PriorityDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3589,9 +3589,9 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GestionProyTableAdapter.PriorityDataTable GetData() {
+        public virtual DataSetGestionProy.PriorityDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GestionProyTableAdapter.PriorityDataTable dataTable = new GestionProyTableAdapter.PriorityDataTable();
+            DataSetGestionProy.PriorityDataTable dataTable = new DataSetGestionProy.PriorityDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3599,14 +3599,14 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter.PriorityDataTable dataTable) {
+        public virtual int Update(DataSetGestionProy.PriorityDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter dataSet) {
+        public virtual int Update(DataSetGestionProy dataSet) {
             return this.Adapter.Update(dataSet, "Priority");
         }
         
@@ -3890,7 +3890,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GestionProyTableAdapter.ProjectDataTable dataTable) {
+        public virtual int Fill(DataSetGestionProy.ProjectDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -3903,9 +3903,9 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GestionProyTableAdapter.ProjectDataTable GetData() {
+        public virtual DataSetGestionProy.ProjectDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GestionProyTableAdapter.ProjectDataTable dataTable = new GestionProyTableAdapter.ProjectDataTable();
+            DataSetGestionProy.ProjectDataTable dataTable = new DataSetGestionProy.ProjectDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -3913,14 +3913,14 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter.ProjectDataTable dataTable) {
+        public virtual int Update(DataSetGestionProy.ProjectDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter dataSet) {
+        public virtual int Update(DataSetGestionProy dataSet) {
             return this.Adapter.Update(dataSet, "Project");
         }
         
@@ -4226,7 +4226,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GestionProyTableAdapter.RoleDataTable dataTable) {
+        public virtual int Fill(DataSetGestionProy.RoleDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4239,9 +4239,9 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GestionProyTableAdapter.RoleDataTable GetData() {
+        public virtual DataSetGestionProy.RoleDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GestionProyTableAdapter.RoleDataTable dataTable = new GestionProyTableAdapter.RoleDataTable();
+            DataSetGestionProy.RoleDataTable dataTable = new DataSetGestionProy.RoleDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4249,14 +4249,14 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter.RoleDataTable dataTable) {
+        public virtual int Update(DataSetGestionProy.RoleDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter dataSet) {
+        public virtual int Update(DataSetGestionProy dataSet) {
             return this.Adapter.Update(dataSet, "Role");
         }
         
@@ -4532,7 +4532,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GestionProyTableAdapter.StateDataTable dataTable) {
+        public virtual int Fill(DataSetGestionProy.StateDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4545,9 +4545,9 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GestionProyTableAdapter.StateDataTable GetData() {
+        public virtual DataSetGestionProy.StateDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GestionProyTableAdapter.StateDataTable dataTable = new GestionProyTableAdapter.StateDataTable();
+            DataSetGestionProy.StateDataTable dataTable = new DataSetGestionProy.StateDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4555,14 +4555,14 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter.StateDataTable dataTable) {
+        public virtual int Update(DataSetGestionProy.StateDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter dataSet) {
+        public virtual int Update(DataSetGestionProy dataSet) {
             return this.Adapter.Update(dataSet, "State");
         }
         
@@ -4838,7 +4838,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GestionProyTableAdapter.TaskDataTable dataTable) {
+        public virtual int Fill(DataSetGestionProy.TaskDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -4851,9 +4851,9 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GestionProyTableAdapter.TaskDataTable GetData() {
+        public virtual DataSetGestionProy.TaskDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GestionProyTableAdapter.TaskDataTable dataTable = new GestionProyTableAdapter.TaskDataTable();
+            DataSetGestionProy.TaskDataTable dataTable = new DataSetGestionProy.TaskDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -4861,14 +4861,14 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter.TaskDataTable dataTable) {
+        public virtual int Update(DataSetGestionProy.TaskDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter dataSet) {
+        public virtual int Update(DataSetGestionProy dataSet) {
             return this.Adapter.Update(dataSet, "Task");
         }
         
@@ -5107,19 +5107,24 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT pk_id, name, email, passHash, fk_id_role, createdIn, state FROM dbo.[User]" +
                 "";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT * FROM dbo.[User] WHERE email = @email;";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@email", global::System.Data.SqlDbType.VarChar, 50, global::System.Data.ParameterDirection.Input, 0, 0, "email", global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(GestionProyTableAdapter.UserDataTable dataTable) {
+        public virtual int Fill(DataSetGestionProy.UserDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -5132,9 +5137,9 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual GestionProyTableAdapter.UserDataTable GetData() {
+        public virtual DataSetGestionProy.UserDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            GestionProyTableAdapter.UserDataTable dataTable = new GestionProyTableAdapter.UserDataTable();
+            DataSetGestionProy.UserDataTable dataTable = new DataSetGestionProy.UserDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -5142,14 +5147,31 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter.UserDataTable dataTable) {
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, false)]
+        public virtual DataSetGestionProy.UserDataTable GetDataByEmail(string email) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((email == null)) {
+                throw new global::System.ArgumentNullException("email");
+            }
+            else {
+                this.Adapter.SelectCommand.Parameters[0].Value = ((string)(email));
+            }
+            DataSetGestionProy.UserDataTable dataTable = new DataSetGestionProy.UserDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        public virtual int Update(DataSetGestionProy.UserDataTable dataTable) {
             return this.Adapter.Update(dataTable);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        public virtual int Update(GestionProyTableAdapter dataSet) {
+        public virtual int Update(DataSetGestionProy dataSet) {
             return this.Adapter.Update(dataSet, "User");
         }
         
@@ -5492,7 +5514,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateUpdatedRows(GestionProyTableAdapter dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(DataSetGestionProy dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._roleTableAdapter != null)) {
                 global::System.Data.DataRow[] updatedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
@@ -5556,7 +5578,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateInsertedRows(GestionProyTableAdapter dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(DataSetGestionProy dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             if ((this._roleTableAdapter != null)) {
                 global::System.Data.DataRow[] addedRows = dataSet.Role.Select(null, null, global::System.Data.DataViewRowState.Added);
@@ -5614,7 +5636,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        private int UpdateDeletedRows(GestionProyTableAdapter dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(DataSetGestionProy dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             if ((this._taskTableAdapter != null)) {
                 global::System.Data.DataRow[] deletedRows = dataSet.Task.Select(null, null, global::System.Data.DataViewRowState.Deleted);
@@ -5696,7 +5718,7 @@ namespace GestionProyAPI.DataSets.DataSetGestionProyTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "15.0.0.0")]
-        public virtual int UpdateAll(GestionProyTableAdapter dataSet) {
+        public virtual int UpdateAll(DataSetGestionProy dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

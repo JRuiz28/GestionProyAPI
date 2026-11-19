@@ -17,7 +17,6 @@ namespace GestionProyAPI.Services
             stateAdapter = new StateTableAdapter();
         }
 
-
         public List<StateModel> GetStates()
         {
             var data = stateAdapter.GetData();
