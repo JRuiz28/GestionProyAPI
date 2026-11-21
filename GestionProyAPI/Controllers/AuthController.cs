@@ -1,4 +1,5 @@
-﻿using GestionProyAPI.Models;
+﻿
+using GestionProyAPI.Models;
 using GestionProyAPI.Services;
 using System;
 using System.Collections.Generic;
@@ -6,6 +7,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using System.Configuration;
 
 namespace GestionProyAPI.Controllers
 {
@@ -29,8 +35,42 @@ namespace GestionProyAPI.Controllers
             {
                 return Unauthorized();
             }
+            
+            var claims = new[]
+            {
+                new Claim(ClaimTypes.NameIdentifier, user.ID.ToString()),
+                new Claim(ClaimTypes.Email, user.Email),
+                new Claim(ClaimTypes.Role, user.ID_Role.ToString())
+            };
 
-            return Ok(user);
+            var key = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(ConfigurationManager.AppSettings["JwtSecret"])
+            );
+
+            var credentials = new SigningCredentials(
+                key, SecurityAlgorithms.HmacSha256
+            );
+            
+            var tokens = new JwtSecurityToken(
+                issuer: ConfigurationManager.AppSettings["JwtIssuer"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(60),
+                signingCredentials: credentials
+            );
+
+            var response = new JwtSecurityTokenHandler().WriteToken(tokens);
+
+            return Ok(new
+            {
+                Token = response,
+                User = new
+                {
+                    user.ID,
+                    user.Name,
+                    user.Email,
+                    user.ID_Role
+                }
+            });
         }
     }
 }
