@@ -11,7 +11,8 @@ namespace GestionProyAPI.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string PassHash { get; set; }
-        public int ID_Role { get; set; }
+        public int? ID_Role { get; set; }
+        public DateTime CreatedIn { get; set; }
         public bool State { get; set; }
     }
 }

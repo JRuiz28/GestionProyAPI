@@ -24,53 +24,60 @@ namespace GestionProyAPI.Controllers
         [Route("login")]
         public IHttpActionResult Login(AuthModel auth)
         {
-            if (auth == null || string.IsNullOrWhiteSpace(auth.Email) || string.IsNullOrWhiteSpace(auth.Password))
+            try
             {
-                return BadRequest("Correo y contraseña son requeridos.");
-            }
-
-            var user = authService.Login(auth.Email, auth.Password);
-
-            if (user == null)
-            {
-                return Unauthorized();
-            }
-            
-            var claims = new[]
-            {
-                new Claim(ClaimTypes.NameIdentifier, user.ID.ToString()),
-                new Claim(ClaimTypes.Email, user.Email),
-                new Claim(ClaimTypes.Role, user.ID_Role.ToString())
-            };
-
-            var key = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(ConfigurationManager.AppSettings["JwtSecret"])
-            );
-
-            var credentials = new SigningCredentials(
-                key, SecurityAlgorithms.HmacSha256
-            );
-            
-            var tokens = new JwtSecurityToken(
-                issuer: ConfigurationManager.AppSettings["JwtIssuer"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(60),
-                signingCredentials: credentials
-            );
-
-            var response = new JwtSecurityTokenHandler().WriteToken(tokens);
-
-            return Ok(new
-            {
-                Token = response,
-                User = new
+                if (auth == null || string.IsNullOrWhiteSpace(auth.Email) || string.IsNullOrWhiteSpace(auth.Password))
                 {
-                    user.ID,
-                    user.Name,
-                    user.Email,
-                    user.ID_Role
+                    return BadRequest("Correo y contraseña son requeridos.");
                 }
-            });
+
+                var user = authService.Login(auth.Email, auth.Password);
+
+                if (user == null || user.ID_Role == null)
+                {
+                    return Unauthorized();
+                }
+
+                var claims = new[]
+                {
+                    new Claim(ClaimTypes.NameIdentifier, user.ID.ToString()),
+                    new Claim(ClaimTypes.Email, user.Email),
+                    new Claim(ClaimTypes.Role, user.ID_Role.ToString())
+                };
+
+                var key = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes(ConfigurationManager.AppSettings["JwtSecret"])
+                );
+
+                var credentials = new SigningCredentials(
+                    key, SecurityAlgorithms.HmacSha256
+                );
+
+                var tokens = new JwtSecurityToken(
+                    issuer: ConfigurationManager.AppSettings["JwtIssuer"],
+                    claims: claims,
+                    expires: DateTime.UtcNow.AddMinutes(60),
+                    signingCredentials: credentials
+                );
+
+                var response = new JwtSecurityTokenHandler().WriteToken(tokens);
+
+                return Ok(new
+                {
+                    Token = response,
+                    User = new
+                    {
+                        user.ID,
+                        user.Name,
+                        user.Email,
+                        user.ID_Role
+                    }
+                });
+            }
+            catch (Exception ex)
+            {
+                return InternalServerError(ex);
+            }
         }
     }
 }

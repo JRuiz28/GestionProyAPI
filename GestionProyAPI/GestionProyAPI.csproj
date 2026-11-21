@@ -187,6 +187,7 @@
     <Compile Include="Controllers\AuthController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\StatesController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="DataSets\GestionProyTableAdapter.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
