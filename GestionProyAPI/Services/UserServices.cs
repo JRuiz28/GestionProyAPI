@@ -37,7 +37,7 @@ namespace GestionProyAPI.Services
                     Name = user.name,
                     Email = user.email,
                     PassHash = user.passHash,
-                    ID_Role = user.fk_id_role,
+                    ID_Role = user.Isfk_id_roleNull() ? (int?)null : user.fk_id_role,
                     State = user.state
                 });
             }

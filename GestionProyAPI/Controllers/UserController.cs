@@ -9,6 +9,7 @@ using System.Web.Http;
 
 namespace GestionProyAPI.Controllers
 {
+    [Authorize(Roles = "1")]
     [RoutePrefix("api/users")]
     public class UserController : ApiController
     {
@@ -24,9 +25,9 @@ namespace GestionProyAPI.Controllers
 
                 return Ok(users);
             }
-            catch
+            catch (Exception ex)
             {
-                return InternalServerError();
+                return InternalServerError(ex);
             }
         }
 

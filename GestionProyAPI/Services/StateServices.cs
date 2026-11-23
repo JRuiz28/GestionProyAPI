@@ -36,6 +36,18 @@ namespace GestionProyAPI.Services
             return States;
         }
 
+        public int? GetIdByNameAndEntity (string name, string entity)
+        {
+            var states = stateAdapter.GetIDbyNameAndEntity("Cerrado", "Proyecto");
 
+            if (states.Count == 0)
+            {
+                return null;
+            }
+
+            var state = states[0];
+
+            return state.pk_id;
+        }
     }
 }

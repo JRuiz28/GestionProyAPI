@@ -13,6 +13,154 @@
     @*<p>Es un componente de interfaz que permite mostrar y ocultar bloques de contenido de forma desplegable.</p>*@
 </details>
 
+<details name="" open class="panel panel-info">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-info">GET</span>
+                &nbsp; /api/users/{id}
+            </strong>
+        </div>
+    </summary>
+    <p>Get User By ID</p>
+</details>
+
+<details name="" open class="panel panel-success">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-success">POST</span>
+                &nbsp; /api/users
+            </strong>
+        </div>
+    </summary>
+    <p>
+        Insert
+    </p>
+    <pre>
+{
+    "Name": "Prueba3",
+    "Email": "nuevo3@gmail.com",
+    "PassHash": "123"
+}
+</pre>
+</details>
+
+<details name="" open class="panel panel-warning">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-warning">PUT</span>
+                &nbsp; /api/users/{id}
+            </strong>
+        </div>
+    </summary>
+    <p>
+        Update
+    </p>
+    <pre>
+{
+    "Name": "Usuario actualizado",
+    "Email": "jrc2899@gmail.com",
+    "ID_Role": null,
+    "State": false
+}
+</pre>
+</details>
+
+<details name="" open class="panel panel-danger">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-danger">DELETE</span>
+                &nbsp; /api/users/{id}
+            </strong>
+        </div>
+    </summary>
+    @*<p>Es un componente de interfaz que permite mostrar y ocultar bloques de contenido de forma desplegable.</p>*@
+</details>
+
+<h2>Project</h2>
+
+<details name="" open class="panel panel-info">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-info">GET</span>
+                &nbsp; /api/projects/{id}
+            </strong>
+        </div>
+    </summary>
+</details>
+
+<details name="" open class="panel panel-success">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-success">POST</span>
+                &nbsp; /api/projects
+            </strong>
+        </div>
+    </summary>
+    <p>
+        Insert
+    </p>
+    <pre>
+{
+    "Name": "Nuevo proyecto",
+    "Description": "Desarrollo",
+    "DateStart": "2026-11-23T00:00:00",
+    "DateEnd": "2027-02-28T00:00:00"
+}
+</pre>
+</details>
+
+<details name="" open class="panel panel-warning">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-warning">PUT</span>
+                &nbsp; /api/projects/{id}
+            </strong>
+        </div>
+    </summary>
+    <p>
+        Update
+    </p>
+    <pre>
+{
+    "Name": "2",
+    "Description": "2",
+    "DateStart": "2026-11-23T00:00:00",
+    "DateEnd": "2027-02-28T00:00:00",
+    "ID_Assigned": null
+}
+</pre>
+</details>
+
+<details name="" open class="panel panel-warning">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-warning">PUT</span>
+                &nbsp; api/projects/{id}/close
+            </strong>
+        </div>
+    </summary>
+</details>
+
+<details name="" open class="panel panel-danger">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-danger">DELETE</span>
+                &nbsp; /api/projects/{id}
+            </strong>
+        </div>
+    </summary>
+    @*<p>Es un componente de interfaz que permite mostrar y ocultar bloques de contenido de forma desplegable.</p>*@
+</details>
+
 <h2>State</h2>
 
 <details name="getState" open class="panel panel-info">
