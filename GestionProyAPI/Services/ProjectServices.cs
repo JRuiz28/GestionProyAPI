@@ -47,6 +47,34 @@ namespace GestionProyAPI.Services
             return projects;
         }
 
+        public List<ProjectModel> getProjectsByUser(int userID)
+        {
+            var list = projectAdapter.GetProjectsByUserID(userID);
+
+            if (list.Count == 0)
+            {
+                return null;
+            }
+
+            List<ProjectModel> projects = new List<ProjectModel>();
+
+            foreach (var project in list)
+            {
+                projects.Add(new ProjectModel
+                {
+                    ID = project.pk_id,
+                    Name = project.name,
+                    Description = project.description,
+                    DateStart = project.dateStart,
+                    DateEnd = project.dateEnd,
+                    ID_State = project.Isfk_id_stateNull() ? (int?)null : project.fk_id_state,
+                    ID_Assigned = project.Isfk_id_assignedNull() ? (int?)null : project.fk_id_assigned
+                });
+            }
+
+            return projects;
+        }
+
         public ProjectModel GetProjectByID(int id)
         {
             var projects = projectAdapter.GetDataByID(id);

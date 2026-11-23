@@ -5,24 +5,47 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Security.Claims;
 using System.Web.Http;
 
 namespace GestionProyAPI.Controllers
 {
+    [Authorize(Roles = "1,2")]
     [RoutePrefix("api/projects")]
     public class ProjectController : ApiController
     {
         private ProjectServices projectServices = new ProjectServices();
 
+        [Authorize(Roles = "1,2")]
         [HttpGet]
         [Route("all")]
         public IHttpActionResult getProjects()
         {
             try
             {
-                List<ProjectModel> projects = projectServices.getAllProjects();
+                if (User.IsInRole("1"))
+                {
+                    List<ProjectModel> projects = projectServices.getAllProjects();
 
-                return Ok(projects);
+                    if (projects == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(projects);
+                }
+                else
+                {
+                    int userID = GetUserID();
+                    List<ProjectModel> projects = projectServices.getProjectsByUser(userID);
+
+                    if (projects == null)
+                    {
+                        return NotFound();
+                    }
+
+                    return Ok(projects);
+                }
             }
             catch (Exception ex)
             {
@@ -30,6 +53,7 @@ namespace GestionProyAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1,2")]
         [HttpGet]
         [Route("{id:int}")]
         public IHttpActionResult getProject(int id)
@@ -51,6 +75,7 @@ namespace GestionProyAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         [Route("")]
         public IHttpActionResult addProject(ProjectModel project)
@@ -75,7 +100,8 @@ namespace GestionProyAPI.Controllers
                 return InternalServerError(ex);
             }
         }
-        
+
+        [Authorize(Roles = "1")]
         [HttpPut]
         [Route("{id:int}")]
         public IHttpActionResult updateProject(int id, ProjectModel project)
@@ -102,6 +128,7 @@ namespace GestionProyAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut]
         [Route("{id:int}/close")]
         public IHttpActionResult updateCloseProject(int id)
@@ -128,6 +155,7 @@ namespace GestionProyAPI.Controllers
             }
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete]
         [Route("{id:int}")]
         public IHttpActionResult deleteProject(int id)
@@ -146,6 +174,16 @@ namespace GestionProyAPI.Controllers
             {
                 return InternalServerError(ex);
             }
+        }
+
+
+        private int GetUserID()
+        {
+            var identity = User.Identity as ClaimsIdentity;
+
+            var claim = identity.FindFirst(ClaimTypes.NameIdentifier);
+
+            return int.Parse(claim.Value);
         }
     }
 }
