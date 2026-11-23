@@ -161,6 +161,78 @@
     @*<p>Es un componente de interfaz que permite mostrar y ocultar bloques de contenido de forma desplegable.</p>*@
 </details>
 
+<h2>Task</h2>
+
+<details name="" open class="panel panel-info">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-info">GET</span>
+                &nbsp; /api/task/{id}
+            </strong>
+        </div>
+    </summary>
+</details>
+
+<details name="" open class="panel panel-success">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-success">POST</span>
+                &nbsp; /api/task
+            </strong>
+        </div>
+    </summary>
+    <p>
+        Insert
+    </p>
+    <pre>
+{
+    "Title": "UX UI SOLO",
+    "Description": "Experiencia de usuario",
+    "ID_Project": 2,
+    "ID_Assigned": 14,
+    "ID_Priority": 2
+}
+</pre>
+</details>
+
+<details name="" open class="panel panel-warning">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-warning">PUT</span>
+                &nbsp; /api/tasks/{id}
+            </strong>
+        </div>
+    </summary>
+    <p>
+        Update
+    </p>
+    <pre>
+{
+    "Title": "PLAN",
+    "Description": "",
+    "ID_Project": 2,
+    "ID_Assigned": 1,
+    "ID_Priority": 2,
+    "ID_State": 1
+}
+</pre>
+</details>
+
+<details name="" open class="panel panel-danger">
+    <summary>
+        <div class="panel-heading">
+            <strong>
+                <span class="label label-danger">DELETE</span>
+                &nbsp; /api/tasks/{id}
+            </strong>
+        </div>
+    </summary>
+    @*<p>Es un componente de interfaz que permite mostrar y ocultar bloques de contenido de forma desplegable.</p>*@
+</details>
+
 <h2>State</h2>
 
 <details name="getState" open class="panel panel-info">

@@ -105,7 +105,7 @@ namespace GestionProyAPI.Services
                 return false;
             }
 
-            project.CreatedIn = DateTime.UtcNow;
+            project.CreatedIn = DateTime.Now;
 
             projectAdapter.InsertProject(
                 project.Name, 

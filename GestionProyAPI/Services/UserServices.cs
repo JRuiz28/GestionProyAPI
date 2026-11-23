@@ -97,7 +97,7 @@ namespace GestionProyAPI.Services
             
             var hasher = new PasswordHasher();
             user.PassHash = hasher.HashPassword(user.PassHash);
-            user.CreatedIn = DateTime.UtcNow;
+            user.CreatedIn = DateTime.Now;
             user.State = true;
 
             userAdapter.InsertUser(user.Name, user.Email, user.PassHash, user.ID_Role, user.CreatedIn, user.State);
